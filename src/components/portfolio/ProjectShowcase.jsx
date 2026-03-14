@@ -25,7 +25,7 @@ export default function ProjectShowcase() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-16"
         >
           <a
@@ -34,7 +34,7 @@ export default function ProjectShowcase() {
             rel="noopener noreferrer"
             className="group block"
           >
-            <div className="relative rounded-2xl overflow-hidden border border-white/5 bg-[#111]">
+            <div className="relative rounded-3xl overflow-hidden border border-white/5 bg-[#111] shadow-2xl shadow-black/30">
               {/* Browser chrome mockup */}
               <div className="flex items-center gap-2 px-5 py-3 bg-[#1a1a1a] border-b border-white/5">
                 <div className="flex gap-1.5">
@@ -57,23 +57,23 @@ export default function ProjectShowcase() {
                   alt="Savira - Stop Paying For Air (Updated)"
                   className="w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-60" />
               </div>
+            </div>
 
-              {/* Overlay info */}
-              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-                <div className="flex items-end justify-between">
-                  <div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-black mb-3">
-                      Savira
-                    </h3>
-                    <p className="text-black max-w-lg text-sm md:text-base leading-relaxed">
-                      A consumer app that scans products to detect shrinkflation, compares prices across retailers, and tracks inflation over time. Free during beta with 700M+ barcodes indexed.
-                    </p>
-                  </div>
-                  <div className="hidden md:flex items-center justify-center w-14 h-14 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 group-hover:bg-amber-400 group-hover:border-amber-400 transition-all duration-500">
-                    <ArrowUpRight className="w-5 h-5 text-white group-hover:text-[#0a0a0a] transition-colors duration-500" />
-                  </div>
+            {/* Info section below – text now white */}
+            <div className="mt-6 bg-[#111]/60 backdrop-blur-sm border border-white/5 rounded-2xl p-8 md:p-10 shadow-lg">
+              <div className="flex items-start justify-between gap-6">
+                <div className="flex-1">
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 inline-block border-b-4 border-amber-400 pb-1">
+                    Savira
+                  </h3>
+                  <p className="text-white text-base md:text-lg leading-relaxed max-w-3xl">
+                    A consumer app that scans products to detect shrinkflation, compares prices across retailers, and tracks inflation over time. Free during beta with 700M+ barcodes indexed.
+                  </p>
+                </div>
+
+                <div className="hidden md:flex items-center justify-center w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 group-hover:bg-amber-400 group-hover:border-amber-400 transition-all duration-500 shrink-0">
+                  <ArrowUpRight className="w-6 h-6 text-white group-hover:text-[#0a0a0a] transition-colors duration-500" />
                 </div>
               </div>
             </div>
