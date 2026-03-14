@@ -7,11 +7,7 @@ export default function Footer() {
         <p className="text-white/30 text-sm">
           © {new Date().getFullYear()} Justin Bajakjian. All rights reserved.
         </p>
-        <div className="flex items-center gap-6">
-          <a href="#" className="text-white/30 text-sm hover:text-white/60 transition-colors">Twitter</a>
-          <a href="#" className="text-white/30 text-sm hover:text-white/60 transition-colors">GitHub</a>
-          <a href="#" className="text-white/30 text-sm hover:text-white/60 transition-colors">LinkedIn</a>
-        </div>
+        
       </div>
     </footer>
   );
