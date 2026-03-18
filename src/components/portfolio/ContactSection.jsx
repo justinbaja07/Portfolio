@@ -1,17 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, ArrowUpRight } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 export default function ContactSection() {
   const email = 'justinbaja07@gmail.com';
   const subject = encodeURIComponent("Let's work together");
+  const isMobile = useIsMobile();
 
-  // Body is intentionally left empty → user starts with a clean compose window
-  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}`;
+  const href = isMobile
+    ? `mailto:${email}?subject=${subject}`
+    : `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}`;
 
   return (
     <section id="contact" className="relative bg-[#0a0a0a] py-32 overflow-hidden">
-      {/* Ambient glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-amber-400/5 rounded-full blur-[120px]" />
 
       <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
@@ -31,20 +33,18 @@ export default function ContactSection() {
           </p>
 
           <a
-            href={gmailComposeUrl}
-            target="_blank"
+            href={href}
+            target={isMobile ? '_self' : '_blank'}
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 bg-white text-[#0a0a0a] px-10 py-4 rounded-full font-medium hover:bg-amber-400 active:bg-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-400/20"
           >
             <Mail className="w-5 h-5" />
             <span>justinbaja07@gmail.com</span>
-            <ArrowUpRight 
-              className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" 
-            />
+            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
           </a>
 
           <p className="text-white/40 text-sm mt-4">
-            Opens Gmail compose (new tab) with subject ready
+            {isMobile ? 'Opens your mail app' : 'Opens Gmail compose (new tab) with subject ready'}
           </p>
         </motion.div>
       </div>
