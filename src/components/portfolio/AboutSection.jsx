@@ -28,7 +28,7 @@ export default function AboutSection() {
               <span className="text-white/40">one pixel at a time.</span>
             </h2>
             <p className="text-white/50 leading-relaxed mb-12 max-w-2xl mx-auto">
-              I'm Justin Bajakjian, a teenage web developer, passionate about creating beautiful, functional websites that make a real impact. I focus on clean design, smooth user experiences, and code that actually performs. From concept to launch, I handle every part of the process.
+              I'm Justin Baja, a teenage web developer, passionate about creating beautiful, functional websites that make a real impact. I focus on clean design, smooth user experiences, and code that actually performs. From concept to launch, I handle every part of the process.
             </p>
 
             {/* Skill cards */}

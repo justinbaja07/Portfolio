@@ -30,7 +30,7 @@ export default function HeroSection({ heroBg }) {
             Justin
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500">
-              Bajakjian
+              Baja
             </span>
           </h1>
           <p className="mt-8 text-white/50 text-lg md:text-xl max-w-xl mx-auto leading-relaxed font-light">
